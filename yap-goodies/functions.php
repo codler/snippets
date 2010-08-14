@@ -2,12 +2,11 @@
 /**
  * Useful functions - Yap goodies
  * 
- * @author			Han Lin Yap
- * @website			http://www.zencodez.net/
- * @created			7th April 2010
- * @last-modified	3rd June 2010
- * @version			1.3
- * @package 		yap-goodies
+ * @author Han Lin Yap < http://zencodez.net/ >
+ * @copyright 2010 zencodez.net
+ * @license http://creativecommons.org/licenses/by-sa/3.0/
+ * @package yap-goodies
+ * @version 1.3 - 2010-06-03
  */
 /*
  * ----------------------------------------

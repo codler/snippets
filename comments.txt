@@ -1,0 +1,7 @@
+/**
+ * @author Han Lin Yap < http://zencodez.net/ >
+ * @copyright 2010 zencodez.net
+ * @license http://creativecommons.org/licenses/by-sa/3.0/
+ * @package project
+ * @version 1.0 - 2010-XX-XX
+ */
