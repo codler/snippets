@@ -8,14 +8,14 @@
  * @copyright 2010 zencodez.net
  * @license http://creativecommons.org/licenses/by-sa/3.0/
  * @package nonce
- * @version 1.0 - 2010-10-24
+ * @version 1.1 - 2010-10-27
  */
 class Nonce {
-	public $life = 86400; // 24 hours
-	public $salt = 'Nonce';
+	public static $life = 86400; // 24 hours
+	public static $salt = 'Nonce';
 
 	function create($action = false, $uid = false, $offset=0) {
-		return substr(hash_hmac(( self::tick() - $offset ) . $action . $uid, self::$salt ), -12, 10);
+		return substr(hash_hmac('md5', ( self::tick() - $offset ) . $action . $uid, self::$salt ), -12, 10);
 	}
 	
 	function verify($nonce, $action = false, $uid = false) {
