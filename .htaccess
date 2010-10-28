@@ -1,4 +1,9 @@
-<Files ~ "^.(htaccess|htpasswd)$">
+# deny all .htaccess, .DS_Store and ._* (resource fork) files
+<Files ~ "^.(htaccess|htpasswd|DS_Store|[_])$">
+deny from all
+</Files>
+# deny access to all .log and .comment files
+<Files ~ "^.*\.([Ll][Oo][Gg]|[cC][oO][mM][mM][eE][nN][tT])">
 deny from all
 </Files>
 <IfModule mod_rewrite.c>
