@@ -2,7 +2,7 @@
 Name: yap-goodies
 Author: Han Lin Yap
 Description: Collection of useful functions
-Version: 0.1 (2010-03-29)
+Version: 0.2 (2010-11-19)
 
 Index:
 	input_int - (req jquery)
@@ -32,7 +32,10 @@ function input_int(event) {
 	}
 	
 	// key 0-9
-	if ((k >= 32 && k <= 47) || (k >= 58 && k <= 126) || k > 127) {
+	if ((k >= 32 && k <= 47) || 
+		(k >= 58 && k <= 95) || 
+		(k >= 106 && k <= 126) || 
+		k > 127) {
 		// Key arrow left and right
 		if (event.keyCode != 37 && event.keyCode != 39) {
 		event.preventDefault();
