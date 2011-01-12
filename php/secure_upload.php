@@ -93,8 +93,8 @@ function secure_upload($options) {
 		
 		// Check allowed file type
 		$image_types = array('gif', 'jpg', 'jpeg', 'png', 'jpe');
-		if ($image) {
-			if (!in_array($ext, $image_types) || is_image($type) || getimagesize($tmp_name) === false) {
+		if ($options['image']) {
+			if (!in_array($ext, $image_types) || !is_image($type) || getimagesize($tmp_name) === false) {
 				continue;
 			}
 		}
@@ -125,6 +125,7 @@ function secure_upload($options) {
 		$success[] = array(
 			'extension' => $ext,
 			'filename' => $name.".".$ext,
+			'original_filename' => $_FILES[$options['field']]['name'][$key],
 			'name' => $name,
 			'size' => $size,
 			'nice_size' => f::nice_size($size),
