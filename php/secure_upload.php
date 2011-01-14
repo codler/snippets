@@ -41,10 +41,12 @@ function secure_upload($options) {
 	$options['image'] = (isset($options['image'])) ? $options['image'] : true; // default true
 	$options['max_size'] = (isset($options['max_size'])) ? min($options['max_size'],server_maxupload()) : server_maxupload(); // default server max upload in bytes
 
-	
-	
-	if (empty($options['field']) || !isset($_FILES[$options['field']]) || empty($options['path'])) {
+	if (empty($options['field']) || empty($options['path'])) {
 		return array('error' => 'Option field and path is required');
+	}
+	
+	if (!isset($_FILES[$options['field']])) {
+		return array('error' => 'No file was selected');
 	}
 	
 	// validate path
