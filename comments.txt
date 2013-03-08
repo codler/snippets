@@ -1,7 +1,11 @@
 /**
- * @author Han Lin Yap < http://zencodez.net/ >
- * @copyright 2012 zencodez.net
+ * @author Han Lin Yap < http://yap.nu/ >
+ * @copyright 2013 yap.nu
  * @license http://creativecommons.org/licenses/by-sa/3.0/
  * @package project
- * @version 1.0 - 2012-XX-XX
+ * @version 1.0 - 2013-XX-XX
  */
+
+/*! project - v1.0 - 2013-XX-XX - Description
+* Project url
+* Copyright (c) 2013 Han Lin Yap http://yap.nu; http://creativecommons.org/licenses/by-sa/3.0/ */
